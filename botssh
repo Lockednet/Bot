@@ -34,7 +34,7 @@ menu_compra() {
     fun_menucompra $id_chatuser
     local msg
         msg="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×\n"
-        msg+="Deu certo o Teste? ⚡SEJA VIP⚡\n1 ACESSO 20,00 🥇\n2 ACESSOS 35,00 🥈\n3 ACESSOS 30,00. 🥉"
+        msg+="Deu certo o Teste? ⚡SEJA VIP⚡\n1 ACESSO  20,00 🥇\n2 ACESSOS 35,00 🥈\n3 ACESSOS 30,00 🥉"
         ShellBot.editMessageText --chat_id $id_chatuser \
         --message_id ${callback_query_message_message_id[$id]} \
         --text "$(echo -e $msg)" \
@@ -57,7 +57,7 @@ menu_compra() {
 criarteste() {
     [[ $(grep -wc ${callback_query_from_id} lista) != '0' ]] && {
       ShellBot.sendMessage --chat_id ${callback_query_message_chat_id} \
-        --text "Volte amanhã"
+        --text "Só pode testar 1 vez 👋😙"
       return 0
     }
     usuario=$(echo SSH$(( RANDOM% + 350 )))
