@@ -17,8 +17,8 @@ menu() {
     msg="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
     msg+="Olá <b>${message_from_first_name[$id]}</b>, BEM VINDO\n\n"
     msg+="Crie seu teste grátis aqui\nCaso queira teste de IPTV chame o \n@LOCKED_SSH"
-    ShellBot.sendAnimation --chat_id ${message_chat_id[$id]} \
-        --animation "https://lockedssh.shop/gif.gif" \
+    ShellBot.sendDocument --chat_id ${message_chat_id[$id]} \
+        --document "https://lockedssh.shop/gif.gif" \
         --caption "$(echo -e $msg)" \
         --reply_markup "$keyboard1" \
         --parse_mode html
