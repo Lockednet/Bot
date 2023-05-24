@@ -14,14 +14,15 @@ ShellBot.username
 # - Funcao menu
 menu() {
     local msg
-        msg="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
-        msg+="Olá <b>${message_from_first_name[$id]}</b>, BEM VINDO\n\n"
-        msg+="Crie seu teste grátis aqui\nCaso queira teste de IPTV chame o \n@LOCKED_SSH"
-        ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
-        --text "$(echo -e $msg)" \
+    msg="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
+    msg+="Olá <b>${message_from_first_name[$id]}</b>, BEM VINDO\n\n"
+    msg+="Crie seu teste grátis aqui\nCaso queira teste de IPTV chame o \n@LOCKED_SSH"
+    ShellBot.sendAnimation --chat_id ${message_chat_id[$id]} \
+        --animation "https://lockedssh.shop/gif.gif" \
+        --caption "$(echo -e $msg)" \
         --reply_markup "$keyboard1" \
         --parse_mode html
-        return 0
+    return 0
 }
 
 # - Funcao menu Compra
