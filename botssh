@@ -34,7 +34,7 @@ menu_compra() {
     fun_menucompra $id_chatuser
     local msg
         msg="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×\n"
-        msg+="</b>1 ACESSO R$20,00 🥇</b>\n</b>2 ACESSOS R$35,00 🥈</b>\n3 ACESSOS R$30,00. 🥉"
+        msg+=" 1 ACESSO R$20,00 🥇\n2 ACESSOS R$35,00 🥈\n3 ACESSOS R$30,00. 🥉"
         ShellBot.editMessageText --chat_id $id_chatuser \
         --message_id ${callback_query_message_message_id[$id]} \
         --text "$(echo -e $msg)" \
